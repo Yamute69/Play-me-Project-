@@ -1,0 +1,283 @@
+
+:root{
+    --a:0;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+    background-color: black;
+    color: pink;
+    overflow: hidden;
+}
+
+.left{
+    width: 25vw;
+    background-color: #2E354F;
+       
+}
+.right{
+    width: 75vw;
+    position: relative;
+
+}
+.close{
+    width:20px;
+    position: absolute;
+    top:10px;
+    right:10px;
+    display: none;
+    cursor: pointer;
+}
+.top{
+    flex-direction: column;
+    /* position: relative; */
+}
+
+.top ul li {
+    display: flex;
+    gap: 10px;
+    width: 15px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* .top ul{
+    padding: 20px 0px 15px 20px;
+} */
+
+.bottom{
+    min-height: 80vh;
+    position: relative;
+}
+.heading {
+    gap: 15px;
+    width: 100%;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+.heading img {
+    width: 30px;
+}
+
+.songslist {
+    height: 50vh;
+    overflow: auto;
+    margin-bottom: 44px;
+}
+
+.songslist ul{
+    padding: 0 12px;
+}
+.songslist ul li{
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(193, 193, 215, 0.2);
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+.playnow{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.songslist .info {
+    font-size: 13px;
+    width: 344px;
+    word-break: break-all;
+}
+.songslist .info div{
+    word-break: break-all;
+}
+
+/* .heading img{
+    padding-right: 8px;
+} */
+.footer{
+    display: flex;
+    font-size: 10px;
+    color: #1C2137;
+    gap: 13px;
+    position: absolute;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.footer a{
+color: pink;
+}
+
+.footer ul{
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 23px;
+    font-size: small;
+}
+
+.navbar{
+    justify-content: space-between;
+    background-color: #2E354F;
+    margin:auto;
+    margin-top: 10px;
+    width: 73vw;
+}
+.navbar>* {
+    padding: 20px;
+}
+.arrows > *{
+    cursor: pointer;
+}
+.hamburger{
+    display: none;
+}
+.buttons>* {
+    margin: 0 12px;
+    border-radius: 10px;
+    padding: 8px 12px 8px 12px ;
+    color:pink;
+    background-color: #2E354F;
+}
+.buttons *:hover{
+background-color:rgba(190, 190, 210, 1);
+color :black;
+}
+
+.playlistcontainer {
+    padding: 16px;
+}
+
+.playlistcontainer h1 {
+    padding: 16px;
+}
+
+
+.cardcontainer{
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 50vh; 
+}
+.card{
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #313854;
+    color: pink;
+    position: relative;
+    transition: all .9s;
+}
+.card .svgimg{
+        width: 28px;
+        height: 28px;
+        background-color: #1fdf64;
+        border-radius: 50%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 88px;
+        right: 17px;
+        opacity: var(--a);
+        transition: all 1s ease-out;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.card > *{
+ padding-top: 10px;
+}
+.card:hover{
+    background-color: #5B5E7D;
+    cursor: pointer;
+    --a: 1;
+}
+
+
+.playbar{
+    margin: 2px 12px;
+    bottom: 1px;
+    position: fixed;
+    width: 72%;
+    gap: 22px;
+    border-radius: 10px;
+    background-color: #2E354F;
+    height:55px;
+    padding: 22px 0px;
+    align-items: center;
+    color: pink;
+    justify-content: space-evenly;
+}
+.songinfo,.songtime {
+    padding: 0px 50px;
+
+}
+.vol{
+    cursor: pointer;
+}
+.vol input{
+    cursor: pointer;
+}
+.playbar img{
+    padding: 0px 3px;
+    cursor: pointer;
+}
+.seekbar{
+    width: 65%;
+    margin: 0px 0px 0px 90px;
+    height: 5px;
+    background-color:#E0E0E0;
+    position: fixed;
+    bottom: 15px;
+    cursor: pointer;
+}
+.circle{
+    background-color: #FF7E79;
+    width: 15px;
+    height: 15px;
+    border: 2px solid pink;
+    border-radius: 22px;
+    position: relative;
+    bottom: 8px;
+    left: 0px;
+    transition: left 0.3s;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .left{
+        z-index: 1;
+        position: absolute;
+        transition: all 3s;
+        left:-100%;
+        width: 233px;
+    }
+    .right{
+        width: 100vw;
+    }
+    .playbar{
+        width: 95vw;
+    }
+    .hamburger{
+        display: block;
+    }
+    .close{
+        display: block;
+    }
+  }
+

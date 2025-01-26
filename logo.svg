@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="300 0 300 300" width="60" height="8">
+  <!-- Green Circle -->
+  <circle cx="100" cy="100" r="90" fill="black" />
+
+ <polygon points="60,60 90,140 30,140" fill="Pink" />
+  <polygon points="100,40 130,160 70,160" fill="Pink" />
+  <polygon points="140,60 170,140 110,140" fill="Pink" />
+  <text x="200" y="140" font-family="cursive" font-size="130" fill="Pink" style="font-weight: bold;">PL@Y~ME</text>
+
+</svg>
